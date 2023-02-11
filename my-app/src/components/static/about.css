@@ -1,0 +1,175 @@
+.about_container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+    text-align:center;
+    /* top:1rem;
+    position: fixed; */
+    
+}
+
+
+.about_me {
+    
+    padding: 1rem;
+    border-radius: 2rem;
+    background: linear-gradient(
+        45deg,transparent,
+        var(--color-primary-variant),
+        transparent);
+    display: grid;  
+    grid-template-rows: repeat(2,1fr);
+    place-items: center;
+    font-size: medium;  
+}
+
+.about_me-image {
+    border-radius: 2rem;
+    overflow:hidden;
+    transform: rotate(0deg);
+    transition: var(--transition);
+
+}
+
+.about_me-image:hover{
+    transform: rotate(0deg);
+}
+
+.about_cards {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1.5rem ;
+    
+}
+.about_card {
+    background: linear-gradient(var(--color-primary-variant),transparent);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+
+}
+
+.about_card:hover {
+    background: linear-gradient(var(--color-primary),transparent) ;
+    border-color: var(--color-primary);
+    cursor: default;
+}
+
+.about_icon {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about_card h5 {
+    font-size: 0.95rem;
+}
+
+.about_card small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+
+.about_content p {
+    width: 100%;
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+    top: 2rem;
+    background:linear-gradient(var(--color-primary-variant) ,transparent);
+    
+    
+    
+}
+
+
+
+/*========Media Querries(Medium Devices)======*/
+
+@media screen and (max-width: 1024px) {
+    .about_container {
+        grid-template-columns: 1fr;
+        
+        gap: 0;
+    }
+   .about_me{
+      
+       margin:0 auto 2rem;
+
+
+   }
+
+   .about_content p {
+       margin: 1rem 0 1.5rem;
+   }
+
+   .about_me-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(-10);
+    transition: var(--transition);
+
+}
+
+    
+  }
+
+
+  
+/*========Media Querries(Small Devices)======*/
+
+@media screen and (max-width: 600px) {
+    
+    
+    .about_me {
+        width: 65%;
+       font-size: 10px;
+       border-radius: 3rem;
+        
+          
+         
+    }
+    .about_cards{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+
+
+    }
+    
+    .about_card h5 {
+    font-size: 0.95rem;
+     }
+     .about_card {
+        background: linear-gradient(var(--color-primary-variant),transparent);
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        padding: 5px;
+        text-align: center;
+        transition: var(--transition);
+    
+    }
+
+    .about_content{
+        text-align: center;
+
+    }
+    .about_content p {
+        margin: 1.5rem 0;
+    }
+
+    
+
+    .about_me-image {
+        border-radius: 3rem;
+        overflow: hidden;
+        transform: rotate(-10);
+        transition: var(--transition);
+    
+    }
+
+
+
+
+  }
